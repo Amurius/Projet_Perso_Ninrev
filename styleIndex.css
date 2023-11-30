@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "Handwriting";
+    src: url(./Police/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+body{
+    font-family: "Handwriting";
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-margin: 4rem;
+  }
+  .navMenu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }  
+  header{
+    width: 90%;
+    height: 4rem;
+    margin: 1rem 5% 2rem 5%;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgb(197, 197, 197);
+    z-index: 2;
+  }
+  header ul li a{
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  section{
+    width: 100%;
+    height: 95vh;
+  }
+  .sectionTop{
+    position: relative;
+    background-color: white;
+    z-index: 1;
+  }
+  .btn-round{
+    padding: 2px 1rem;
+    border:1px solid black;
+    border-radius: 1rem;
+    transition: border-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+  }
+  .btn-round:hover{
+    background-color: rgb(141, 8, 208);
+    color: white;
+    border-color: rgb(141, 8, 208);
+  }
+
+  .burgerMenu {
+    display: none;
+  }
+  
+  .burgerMenu svg, .shoppingCart svg, .logoEntrerise{
+    width: 3rem;
+    height: 3rem;
+  }
+  .shoppingCart svg{
+    stroke: darkorchid;
+  }
+  .headerInput[type=search] {
+    position: relative;
+    left: 0rem;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+  }
+  .headerInput[type=search]::placeholder{
+    font-family: "Handwriting";
+    font-size: 22px;
+  }
+  .overlayMenuMobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 2;
+  }
+  .bounce:hover {
+    animation: bounce 1.5s;
+  }
+  
+  @keyframes bounce {
+    40%,
+    50%,
+    75%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-12px);
+    }
+  }
+  .btn-top a{
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    position: fixed;
+    top: 85%;
+    left: 93%;
+    z-index: 0;
+    padding: 1rem;
+    color: black;
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgb(197, 197, 197);
+  }
+  @media screen and (max-width: 915px) {
+    .navMenu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100%;
+      background-color: rgb(141, 8, 208);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: 0.3s transform ease-in;
+    }
+    .navMenu.open {
+      transform: initial;
+      display: flex;
+    }
+  
+    .navMenu ul {
+      flex-direction: column;
+    }
+
+    .navMenu ul li {
+        padding-bottom: 2rem;
+    }
+  
+    .menuLink {
+      margin: 0 0 20px 0;
+      align-items: flex-start;
+    }
+    .display.open {
+        z-index: -1;
+    }
+    .burgerMenu {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .burgerMenu svg:hover {
+        stroke: darkorchid;
+        transition: 0.2s stroke ease-in-out;
+        transform: rotate3d(0,1,0,3.142rad);
+        transition-duration: 0.5s;
+        transition-property: transform;
+    }
+  
+    .navMenuClose {
+      display: block;
+      cursor: pointer;
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  
+    .navMenuClose svg:hover {
+      stroke: white;
+      transition: 0.2s stroke ease-in-out;
+      transform: rotate3d(1,0,0,3.142rad);
+      transition-duration: 0.5s;
+      transition-property: transform;
+    }
+  
+    .overlayMenuMobile.open {
+      display: block;
+    }
+  }

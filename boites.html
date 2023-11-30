@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleIndex.css">
+  <title>Mon Style Habits-tu-elle</title>
+</head>
+<body>
+  <div class="overlayMenuMobile" onclick="closeMenuMobile()"></div>
+  <header>
+    <img class="logoEntrerise" src="./Images/t-shirt.png" alt="NIKE OUMOUK">
+    <input class="headerInput" list="list_vetements" type="search" placeholder="Search..."/>
+    <datalist id="list_vetements">
+      <option value="Boite Sexy"></option>
+      <option value="Boite Conford"></option>
+      <option value="Boite Irresistible"></option>
+      <option value="Boite Magnifique"></option>
+      <option value="Boite Belle-dame"></option>
+    </datalist>
+    <form action=""></form>
+    <nav class="navMenu">
+      <div class="burgerMenu navMenuClose" onclick="closeMenuMobile()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      </div>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="#boites">Boites</a></li>
+        <li><a href="#produits">Produits</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="" class="btn-round">Sign in</a></li>
+      </ul>
+    </nav>
+    <a href="./panier.html" class="bounce">
+      <div class="shoppingCart">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+        </svg>        
+      </div>
+    </a>
+    <div class="burgerMenu display" onclick="openMenuMobile()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </div>
+  </header>
+  <script>
+    function openMenuMobile() {
+      document.querySelector('.navMenu').classList.add("open");
+      document.querySelector('.display').classList.add("open");
+      document.querySelector('.overlayMenuMobile').classList.add("open");
+    }
+    function closeMenuMobile() {
+      document.querySelector('.navMenu').classList.remove("open");
+      document.querySelector('.display').classList.remove("open");
+      document.querySelector('.overlayMenuMobile').classList.remove("open");
+    }
+  </script>
+  <section id="top" class="sectionTop">
+  Top
+  </section>
+  <section id="boites"class="sectionBoites">
+  Boites
+  </section>
+  <div class="btn-top">
+    <a href="#">Top</a>
+  </div>
+</body>
+</html>
